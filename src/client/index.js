@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { response } from "express";
 
 fetch('/api/').then(response => {
   console.log(response.json());
