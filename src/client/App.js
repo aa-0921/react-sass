@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 interface Props {
   text: string,
@@ -27,5 +28,11 @@ export default function App() {
     </div>
   );
 }
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
+
+export const Index = () => {
+  return <div>name</div>;
+};
+ReactDOM.render(<Index />, document.getElementById('index'));
