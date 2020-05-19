@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "precommit": "lint-staged",
+    "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'",
     "server": "nodemon src/server/server.js  --exec babel-node",
     "client": "webpack-dev-server --config ./config/webpack.config.js --open --mode development",
     "build": "webpack --config ./config/webpack.config.js --mode development",
@@ -10,6 +12,15 @@
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.{js.jsx}": [
+      "eslint --fix",
+      "get add"
+    ]
+  },
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
