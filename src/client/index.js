@@ -4,13 +4,12 @@ import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-
-fetch('/api/').then(response => {
-  console.log(response.json());
-})
-
 export const Index = () => {
-  return <div>Hello React&sass!</div>;
+  return <div>name</div>;
 };
 
 ReactDOM.render(<Index />, document.getElementById('index'));
+
+// fetch('/api/').then(response => {
+//   console.log(response.json());
+// })
