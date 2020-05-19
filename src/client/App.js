@@ -20,7 +20,6 @@ function zeitBtn() {
   return <Button>Click Me</Button>;
 }
 
-
 function Text(props: Props) {
   return <div style={{ color: 'green' }}>{props.text}</div>;
 }
