@@ -10,7 +10,7 @@ fetch('/api/').then(response => {
 })
 
 export const Index = () => {
-  return <div>Hello React!</div>;
+  return <div>Hello React&sass!</div>;
 };
 
 ReactDOM.render(<Index />, document.getElementById('index'));
