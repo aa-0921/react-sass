@@ -8,6 +8,7 @@ export const Index = () => {
   return <div>name</div>;
 };
 
+
 ReactDOM.render(<Index />, document.getElementById('index'));
 
 // fetch('/api/').then(response => {
