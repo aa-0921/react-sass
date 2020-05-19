@@ -1,8 +1,6 @@
 {
   "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
@@ -21,8 +19,10 @@
     "react/react-in-jsx-scope": 2,
     "no-console": 0
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ]
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
