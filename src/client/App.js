@@ -17,7 +17,7 @@ interface Props {
 }
 
 function zeitBtn() {
-  return <Button>Click Me</Button>;
+  return <Button>Click MeClick MeClick MeClick Me</Button>;
 }
 
 function Text(props: Props) {
