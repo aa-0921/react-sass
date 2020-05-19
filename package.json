@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "precommit": "lint-staged",
     "lint": "eslint src --fix -c .eslintrc.json 'src/**/*.js'",
     "server": "nodemon src/server/server.js  --exec babel-node",
     "client": "webpack-dev-server --config ./config/webpack.config.js --open --mode development",
@@ -60,5 +59,10 @@
   "bugs": {
     "url": "https://github.com/aa-0921/react-sass/issues"
   },
-  "homepage": "https://github.com/aa-0921/react-sass#readme"
+  "homepage": "https://github.com/aa-0921/react-sass#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
