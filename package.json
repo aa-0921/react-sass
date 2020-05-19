@@ -1,7 +1,9 @@
 {
   "scripts": {
     "client": "webpack-dev-server --config ./config/webpack.config.js --open --mode development",
-    "build": "webpack --config ./config/webpack.config.js --mode development"
+    "build": "webpack --config ./config/webpack.config.js --mode development",
+    "server": "nodemon src/server/server.js  --exec babel-node",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "name": "react-sass",
   "description": "",
