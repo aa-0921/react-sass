@@ -33,7 +33,6 @@ function ZeitToast() {
 import { ZeitProvider, CssBaseline } from '@zeit-ui/react'
 
 
-
 export default function App() {
   return(
     <ZeitProvider>
