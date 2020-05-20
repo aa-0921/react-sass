@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 // import './App.scss'
 import { Button } from '@zeit-ui/react'
-
+import { Image } from '@zeit-ui/react'
 // import { ZeitProvider, CssBaseline } from '@zeit-ui/react'
 
 // const Application = () => (
@@ -20,6 +20,11 @@ function ZeitBtn() {
   return <Button>Click MeClick MeClick MeClick Me</Button>;
 }
 
+function SiteImage() {
+  return <Image width="540" height="160"
+    src="http://www.deelay.me/2000/https://react.zeit-ui.co/images/custom-domains.png" />;
+}
+
 function Text(props: Props) {
   return <div style={{ color: 'green' }}>{props.text}</div>;
 }
@@ -34,6 +39,7 @@ export default function App() {
         入力して下さい
       </h1>
       <ZeitBtn />
+      <SiteImage />
       <input
         type="text"
         value={text}
