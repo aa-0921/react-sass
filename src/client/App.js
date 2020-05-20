@@ -16,7 +16,7 @@ interface Props {
   text: string,
 }
 
-function zeitBtn() {
+function ZeitBtn() {
   return <Button>Click MeClick MeClick MeClick Me</Button>;
 }
 
@@ -33,7 +33,7 @@ export default function App() {
         <Text text={text} />
         入力して下さい
       </h1>
-      <zeitBtn />
+      <ZeitBtn />
       <input
         type="text"
         value={text}
