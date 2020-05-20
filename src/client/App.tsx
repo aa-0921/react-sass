@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import * as  React from 'react';
+// import React, { useState } from 'react';
+import * as ReactDOM from 'react-dom';
 // import './App.scss'
 import { Button } from '@zeit-ui/react'
 import { Image } from '@zeit-ui/react'
 import { useToasts } from '@zeit-ui/react'
-
-
-
 
 interface Props {
   text: string,
