@@ -3,14 +3,10 @@ import ReactDOM from 'react-dom';
 // import './App.scss'
 import { Button } from '@zeit-ui/react'
 import { Image } from '@zeit-ui/react'
-// import { ZeitProvider, CssBaseline } from '@zeit-ui/react'
+import { useToasts } from '@zeit-ui/react'
 
-// const Application = () => (
-//   <ZeitProvider>
-//     <CssBaseline />
-//     <App />
-//   </ZeitProvider>
-// )
+
+
 
 interface Props {
   text: string,
@@ -29,7 +25,29 @@ function Text(props: Props) {
   return <div style={{ color: 'green' }}>{props.text}</div>;
 }
 
+
+function ZeitToast() {
+  const [toasts, setToast] = useToasts()
+  const click = () => setToast({ text: 'The Evil Rabbit jumped over the fence.' })
+  return <Button onClick={click}>Show Toast</Button>
+}
+
+import { ZeitProvider, CssBaseline } from '@zeit-ui/react'
+
+
+
 export default function App() {
+  return(
+    <ZeitProvider>
+      <CssBaseline />
+      <HomePage />
+    </ZeitProvider>
+  )
+}
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+function HomePage() {
   const [text, setText] = useState('');
 
   return (
@@ -40,6 +58,7 @@ export default function App() {
       </h1>
       <ZeitBtn />
       <SiteImage />
+      <ZeitToast />
       <input
         type="text"
         value={text}
@@ -50,7 +69,7 @@ export default function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<HomePage />, document.getElementById('root'));
 
 
 
